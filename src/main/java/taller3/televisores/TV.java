@@ -15,6 +15,7 @@ public class TV {
 
         this.marca=marcaDelTelevisor;
         this.estado=estaEncendidoElTelevisor;
+        numTV++;
 
     }
 
