@@ -2,35 +2,20 @@ package taller3.televisores;
 
 public class Marca {
 
-    private String nombre; //Marca del televisor
+    private String nombre; 
 
-    Marca(String marcaIngresada){ //Ingresar la marca
+    Marca(String marcaIngresada){
 
         this.nombre=marcaIngresada;
 
     }
 
-    public String getNombre() { //Getter para la marca del televisor
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String marcaDelTelevisor) { //Setter para la marca del televisor
+    public void setNombre(String marcaDelTelevisor) { 
         this.nombre = marcaDelTelevisor;
     }
 
 }
-
-/*
-
-           Chocolate
-
-  ___  ___  ___  ___  ___.---------------.
-.'\__\'\__\'\__\'\__\'\__,`   .  ____ ___ \
-|\/ __\/ __\/ __\/ __\/ _:\   |`.  \  \___ \
- \\'\__\'\__\'\__\'\__\'\_`.__|""`. \  \___ \
-  \\/ __\/ __\/ __\/ __\/ __:                \
-   \\'\__\'\__\'\__\ \__\'\_;-----------------`
-    \\/   \/   \/   \/   \/ :                 |
-     \|______________________;________________|
-
- */
