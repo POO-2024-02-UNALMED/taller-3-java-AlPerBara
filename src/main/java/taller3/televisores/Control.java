@@ -5,7 +5,7 @@ public class Control {
     private TV tv;
 
 
-    //Bwaaaa... Setter y getter para el atributo TV
+   
 
     public TV getTv() {
         return tv;
@@ -17,65 +17,57 @@ public class Control {
 
 
 
-    //métodos: turnOn, turnOff, canalUp, canalDown, volumenUp, volumenDown,setCanal y setVolumen.
+   
     
-    public void turnOn(){ //Enciende el tv asociado al control
-        if(this.tv !=null){
-            tv.turnOn();
-        }
+    public void turnOn(){ 
+        tv.turnOn();
+        
     }
 
-    public void turnOff(){ //Apagar televisor
-        if(this.tv !=null){
-            tv.turnOff();
-        }
+    public void turnOff(){ 
+        tv.turnOff();
+        
     }
 
-    public void canalUp(){ //Subir canal
-        if(this.tv !=null){
-            tv.canalUp();
-        }
+    public void canalUp(){ 
+        tv.canalUp();
+    
     }
 
-    public void canalDown(){ //Bajar el canal
-        if(this.tv !=null){
+    public void canalDown(){
             tv.canalDown();
-        }
+        
     }
     
-    public void volumenUp(){ //Sube volumen
-        if(this.tv !=null){
+    public void volumenUp(){ 
             tv.volumenUp();
-        }
+
     }
 
     
-    public void volumenDown(){ //Bajar volumen
-        if(this.tv !=null){
+    public void volumenDown(){ 
             tv.volumenDown();
-        }
+        
     }
 
-    public void setCanal(int canalQueLeVamosAPonerAlTelevisor){ //Colocarle un canal en particular al tv
-        if(this.tv !=null){
+    public void setCanal(int canalQueLeVamosAPonerAlTelevisor){ 
             tv.setCanal(canalQueLeVamosAPonerAlTelevisor);
-        }
+    
     }
 
     
     public void setVolumen(int volumenPorPonerleAlTeve){
-        if(this.tv !=null){
             tv.setVolumen(volumenPorPonerleAlTeve);
-        }
+    
     }
 
 
-    //-------MÉTODO PARA ENLAZAR EL TV CON EL CONTROL-------\\
+   
 
-    public void enlazar(TV televisorQueLeQueremosAsignarAlControlOViceversa){ //Vea pues esta belleza ome:
+    public void enlazar(TV televisorQueLeQueremosAsignarAlControlOViceversa){ 
 
-        this.tv=televisorQueLeQueremosAsignarAlControlOViceversa;  //A este control le asignamos el televisor del atributo
-        televisorQueLeQueremosAsignarAlControlOViceversa.setControl(this);  //Y a ese televisor le decimos que este ES su control
+        this.tv=televisorQueLeQueremosAsignarAlControlOViceversa;  
+        televisorQueLeQueremosAsignarAlControlOViceversa.setControl(this);  
 
     }
 
