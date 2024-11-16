@@ -9,9 +9,9 @@ public class TV {
     private int volumen;
     private Control control;
 
-    private static int numTV=0; //nro de televisores creados
+    private static int numTV=0;
 
-    TV(Marca marcaDelTelevisor, boolean estaEncendidoElTelevisor){ //Configurar la marca y el estado del tv (encendido o apagado)
+    TV(Marca marcaDelTelevisor, boolean estaEncendidoElTelevisor){
 
         this.marca=marcaDelTelevisor;
         this.estado=estaEncendidoElTelevisor;
@@ -25,103 +25,101 @@ public class TV {
     }
 
 
-    //---------SETTERS Y GETTERS GENERICOS---------\\
+   
 
-    public void setMarca(Marca marca) { //Setter marca
+    public void setMarca(Marca marca) {
         this.marca = marca;
     }
 
-    public Marca getMarca() { //getter marca
+    public Marca getMarca() {
         return marca;
     }
 
-    public void setCanal(int canal) { //setter canal
+    public void setCanal(int canal) {
         if ((canal>=1)&&(canal<=120)&&(this.estado)){
             this.canal = canal;
         } 
     }
 
-    public int getCanal() { //getter canal
+    public int getCanal() {
         return canal;
     }
 
-    public void setPrecio(int precio) { //setter precio
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
-    public int getPrecio() { //getter precio
+    public int getPrecio() {
         return precio;
     }
 
-    public void setVolumen(int volumen) { //setter volumen
+    public void setVolumen(int volumen) {
         if ((volumen>=0)&&(volumen<=7)&&(this.estado)){
             this.volumen = volumen;
         }
         
     }
 
-    public int getVolumen() { //getter volumen
+    public int getVolumen() {
         return volumen;
     }
 
-    public void setControl(Control control) { //setter del control
+    public void setControl(Control control) {
         this.control = control;
         this.control.setTv(this);
     }
 
-    public Control getControl() { //getter control
+    public Control getControl() {
         return control;
     }
 
-    public static void setNumTV(int numTV) { //setter para el numero de televisores
+    public static void setNumTV(int numTV) {
         TV.numTV = numTV;
     }
 
-    public static int getNumTV() { //getter nro de tvs
+    public static int getNumTV() { 
         return numTV;
     }
 
 
-    //----------COMANDOS DEL ENCENDIDO Y APAGADO-----------\\
-
-    public void turnOn(){ //Metodo para encender el televisor pasa su estado a positivo
+   
+    public void turnOn(){ 
         this.estado=true;
     }
 
-    public void turnOff(){ //Metodo para apagar el televisor pone el estado en negativo
+    public void turnOff(){ 
         this.estado=false;
     }
 
-    public boolean getEstado(){ //getter del estado, donde sus setters son turnOn y turnOff
+    public boolean getEstado(){ 
         return estado;
     }
 
 
-    //-------CONTROLES PARA CAMBIAR DE CANAL-------\\
-
+   
     public void canalUp(){
-        if ((this.canal<120)&& (this.estado)){ //Subir el canal, debe ser menor a 120 y estar encendido el tv
+        if ((this.canal<120)&& (this.estado)){ 
             this.canal++;
         }
     }
 
     public void canalDown(){
-        if ((this.canal>1)&& (this.estado)){ //Bajar el canal, debe ser mayor a 1 y estar encendido el tv
+        if ((this.canal>1)&& (this.estado)){ 
             this.canal--;
         }     
     }
 
 
-    //-------CONTROLES PARA CAMBIAR EL VOLUMEN-------\\
+    
 
     public void volumenUp(){
-        if ((this.volumen<7)&& (this.estado)){ //Subir el volumen, debe ser menor a 7 y estar encendido el tv
+        if ((this.volumen<7)&& (this.estado)){ 
             this.volumen++;
         }
     }
 
     public void volumenDown(){
-        if ((this.volumen>0)&& (this.estado)){ //Bajar el volumen, debe ser mayor a 0 y estar encendido el tv
+        if ((this.volumen>0)&& (this.estado)){ 
             this.volumen--;
         }     
     }
