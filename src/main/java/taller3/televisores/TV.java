@@ -11,7 +11,7 @@ public class TV {
 
     private static int numTV=0;
 
-    TV(Marca marcaDelTelevisor, boolean estaEncendidoElTelevisor){
+    public TV(Marca marcaDelTelevisor, boolean estaEncendidoElTelevisor){
 
         this.marca=marcaDelTelevisor;
         this.estado=estaEncendidoElTelevisor;
